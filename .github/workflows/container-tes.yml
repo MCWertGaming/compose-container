@@ -26,4 +26,4 @@ jobs:
       - name: Build docker-container
         run: docker build . -t compose-container-test --no-cache
       - name: Test container
-        run: docker run --privileged -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd)/docker-compose.yml:/docker-compose.yml compose-container-test up
+        run: docker run --privileged -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd)/test/docker-compose.yml:/docker-compose.yml compose-container-test up
