@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: check out code
-        uses: actions/checkout@v2.4.0
+        uses: actions/checkout@v3
       - name: Build docker-container
         run: docker build . -t compose-container-test --no-cache
       - name: Test container
